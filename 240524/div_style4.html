@@ -1,0 +1,74 @@
+<!-- div_style4.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div 스타일</title>
+
+    <style type="text/css">
+        .card{
+            display: inline-block;
+        }
+        #wrap{
+            width: 700px;
+            background: lightgray;
+            box-sizing: border-box;
+            padding: 50px 40px 20px 30px;
+        }
+        #box1{
+            width: 100%;
+            height: 300px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        .card{
+            display: inline-block;
+            width: 30%;
+            height: 300px;
+        }
+        /* #box>.card:first-child{}  ->  첫 번째 자식 태그 선택 */
+        /* #box>.card:last-child{}  ->  마지막 자식 태그 선택 */
+        #box1>.card:nth-child(1){
+            background: lightpink;
+            }
+        #box1>.card:nth-child(2){
+            background: lightskyblue;
+            margin-left: 5%;
+            margin-right: 5%
+        }
+        #box1>.card:nth-child(3){
+            background: lightgreen;
+        }
+        #box2{
+            background: lightcoral;
+            height: 80px;
+            padding: 15px 0 20px 30px;
+            box-sizing: border-box;
+        }
+        .text{
+            display: inline-block;
+            width: 70px;
+            height: 40px;
+        }
+        #box2>.text:first-child{
+            background: lightgoldenrodyellow;
+            margin-right: 15px
+        }
+        #box2>.text:last-child{
+            background: lightslategray;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="box1">
+            <span class="card"></span><span class="card"></span><span class="card"></span>
+        </div>
+        <div id="box2">
+            <span class="text"></span>
+            <span class="text"></span>
+        </div>
+    </div>
+</body>
+</html>
