@@ -1,18 +1,14 @@
-<!-- position2.html -->
+<!-- 240525_2.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>태그의 포지션</title>
+    <title>position2 복습</title>
 
     <style>
-        *{
-            margin: 0; padding: 0; box-sizing: border-box;
-        }
-        ul{
-            list-style-type: none;
-        }
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        ul{list-style-type: none;}
         #wrap{
             width: 1000px;
             margin: 0 auto;
@@ -35,9 +31,9 @@
             right: 50px;
         }
         #box3{
+            color: blue;
             position: relative;
             left: 50px;
-            color: blue;
         }
         #nav{
             width: 1000px;
@@ -48,29 +44,28 @@
         #content{
             height: 3000px;
         }
-        #sub{
+        #menu{
             position: fixed;
             top: 150px;
             left: 30px;
         }
-        #box3>b:hover ~ #sub{
+        #box3>b:hover ~ #menu{
             position: absolute;
             top: 0;
             left: 100px;
             width: 100px;
-            background-color: #ccc;
+            background: lightpink;
             z-index: 2;
         }
     </style>
 </head>
 <body>
-    
     <div id="wrap">
         <div id="box1" class="box">로그인</div>
         <div id="box2" class="box">사이트맵</div>
         <div id="box3" class="box">
-            <b>배달의민족</b>    
-            <div id="sub">
+            <b>배달의민족</b>
+            <div id="menu">
                 <ul id="list">
                     <li>햄버거</li>
                     <li>치킨</li>
@@ -92,6 +87,5 @@
     </div>
 
     <div id="content"></div>
-
 </body>
 </html>
