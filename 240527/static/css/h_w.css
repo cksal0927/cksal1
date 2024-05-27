@@ -1,0 +1,84 @@
+/* h_w.css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrap{
+    width: 1000px;
+    margin: 30px auto 200px auto;
+}
+#title{
+    font-size: 20px;
+    font-weight: 800;
+}
+#earth{
+    background: url(../image/EARTH.jpeg);
+    width: 1000px;
+    height: 400px;
+    background-size: contain;
+}
+#item{
+    width: 180px;
+    height: 30px;
+    padding: 5px 10px;
+    position: relative;
+}
+.icon{
+    box-sizing: border-box;
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+}
+#item .item1{
+    background: darkslategray;
+}
+#item .item2{
+    background: skyblue;
+    position: relative;
+    left: 55px;
+}
+#item .item3{
+    background: skyblue;
+    position: relative;
+    left: 55px;
+}
+.main{
+    width: 1000px;
+    margin-bottom: 30px;
+}
+.main p{
+    font-size: 14px;
+    margin-top: 14px;
+}
+#box{
+    width: 930px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: ;
+}
+#box .box1{
+    background: url(../image/warming.jpeg);
+    width: 290px;
+    height: 180px;
+    background-size: cover;
+}
+#box .box2{
+    background: url(../image/polarbear.jpeg);
+    width: 290px;
+    height: 180px;
+    background-size: cover;
+    top: 0;
+    left: 310px;
+    position: absolute;
+}
+#box .box3{
+    background: url(../image/plant.jpeg);
+    width: 290px;
+    height: 180px;
+    background-size: cover;
+    top: 0;
+    left: 620px;
+    position: absolute;
+}
