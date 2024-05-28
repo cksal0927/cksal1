@@ -99,10 +99,13 @@ ul{
     background: skyblue;
     position: fixed;
     top: 150px;
-    left: 30px;
+    left: 40px;
     border-radius: 10px;
     width: 75px;
-    height: 130px;
+    height: 140px;
     color: white;
     padding: 10px 5px;
+}
+#menu li{
+    line-height: 30px;
 }

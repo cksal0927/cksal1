@@ -3,3 +3,9 @@
 tr (table row) : 테이블의 셀을 행 그룹으로 정의. 가로줄. 
 td (table data) : 테이블의 셀을 정의. 텍스트나 이미지를 넣을 수 있음. 
 th (table header) : 테이블의 각 열에 대한 제목. 
+rowspan : 행(row)을 확장. 세로 방향으로 셀을 합침.
+colspan : 열(column)을 확장. 가로 방향으로 셀을 합침.
+colgroup : 열(column) 그룹.
+cellspacing : 셀 간의 간격.
+text-align : 텍스트 정렬.
+border-collapse : 셀 간의 간격 제거.

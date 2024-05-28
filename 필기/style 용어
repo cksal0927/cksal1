@@ -1,0 +1,36 @@
+<스타일 용어>
+
+border: 선두께 선스타일 색상;
+border-radius: ㅁpx; 모서리 굴곡
+box-sizing: border-box; 크기 고정
+display: inline-block; 화면을 배치하는 방법: inline, block 둘 다 가능
+margin: 0 auto; 화면 가운데 정렬.
+vertical-align: ㅁ; 세로 정렬
+line-height: 라인 간 간격
+
+font-size: ㅁpx; 글씨 크기
+font-weight: ㅁ; 글씨 굵기
+font-family: ㅁ; 글꼴
+font-style: ㅁ; 글씨 스타일
+
+position : 태그의 위치를 설정하기 위한 값. 
+position: relative; 자기 자신을 기준으로 위치. 
+position: absolute; 부모(조상)을 기준으로 위치.
+position: sticky; 스크롤이 지정된 위치에 도달하면 해당 위치에 고정.
+position: fixed; 스크롤을 내려도 항상 해당 위치에 고정.
+
+list-style-type 리스트 스타일
+z-index: ㅁ; 요소가 쌓이는 순서 설정.
+nth-child(ㅁ) ㅁ번째 자식 설정. 
+float: left/right; 상위 태그에 포함되지 않고 왼쪽/오른쪽에 정렬.
+text-shadow: 가로거리(+:오른쪽 -:왼쪽) 세로거리(+:하단 -:상단) 번짐정도 색상;
+
+background: url(이미지 주소) (반복 여부) (위치);
+background-size: cover; 지정한 요소를 다 채울 수 있도록 이미지를 확대/축소. 
+background-size: contain; 지정한 요소 내 이미지가 채워질 수 있도록 이미지를 확대/축소. 
+
+cursor : 커서를 올렸을 때 커서 모양. 
+opacity: ㅁ; 불투명도. 백분율로 계산.
+
+margin : 태그 외부 공간을 조절. 인접한 태그(형제 관계) 간격 설정. 전체 레이아웃. 
+padding : 태그 내부 공간을 조절. 태그와 테두리 사이의 간격 설정. 
