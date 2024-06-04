@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 연산자</title>
+    <title>자바스크립트_연산자</title>
 
-<script>
+    <script>
     /*
         <연산자 종류>
         산술 연산자 -> + - * / %
@@ -181,11 +181,11 @@
 
         // 랜덤 함수를 사용하여 (1~50)중의 숫자 두 개를 받으세요.
         // 숫자 두 개의 곱하기 값이 1200 이상이면 '큰 수', 미만이면 '작은 수'라고 출력하세요.
-        num1 = Math.floor( Math.random() * 50 ) + 1;
-        num2 = Math.floor( Math.random() * 50 ) + 1;
+        // num1 = Math.floor( Math.random() * 50 ) + 1;
+        // num2 = Math.floor( Math.random() * 50 ) + 1;
 
-        출력내용 = ( ( num1 * num2) >= 1200 ) ? "큰수 ("+num1+", "+num2+")" : `작은수 ( ${num1}, ${num2} )` ;
-        document.write( 출력내용 );
+        // 출력내용 = ( ( num1 * num2) >= 1200 ) ? "큰수 ("+num1+", "+num2+")" : `작은수 ( ${num1}, ${num2} )` ;
+        // document.write( 출력내용 );
 
         
         // 과제 1.
@@ -197,10 +197,20 @@
         //                 총 며칠 단축되었는가?
         // 모든 값은 정수만 출력.
 
+        수명단축 = 2;
+        연도수 = 20;
+        소주 = parseInt( prompt ( "하루에 몇 잔씩 마십니까? " ) );
+        수명단축_분 = Math.floor( 수명단축*연도수*소주*365 );
+        document.write( "당신의 수명은 총 " + 수명단축_분 + "분 단축되었습니다." );
+        수명단축_시 = Math.floor( ( 수명단축*연도수*소주*365 ) / 60 );
+        document.write( "<br>당신의 수명은 총 " + 수명단축_시 + "시간 단축되었습니다." );
+        수명단축_일 = Math.floor( ( 수명단축*연도수*소주*365 ) / 1440 );
+        document.write( "<br>당신의 수명은 총 " + 수명단축_일 + "일 단축되었습니다.");
+
         // 과제 2.
         // 두 개의 주사위를 던져서 같은 값이 나온다면 당첨, 아니라면 꽝 출력.
         
-</script>
+    </script>
 </head>
 <body>
     
