@@ -10,7 +10,33 @@
         // 과제
         // 1~50 중에 하나를 내가 입력한다.
         // 내가 입력한 숫자를 컴퓨터가 random()함수를 통해 맞혀야 한다. 
-        // up, down을 통해 
+        // up, down을 통해 범위를 좁혀가며 맞힐 수 있게 해야 한다.
+
+        let user = 0;
+        while(  !(1<= user && user <=50)  )
+        user = Number( prompt( "1~50 중 하나를 선택하시오." ) );
+
+        var max = 50;  // 랜덤함수 최댓값
+        var min = 1;  // 랜덤함수 최솟값
+        var mul = 50;  // 랜덤함수 최댓값 - 최솟값 + 1
+
+        while( true ) {
+            com = Math.floor( Math.random() * mul ) + min;
+            if( com === user ) {
+                document.write( "딩동댕!  com = " + com + " user = " + user );
+                break;
+            }
+            else if( com < user ) {
+                document.write( "UP!  com = " + com );
+                min = com + 1;
+                mul = max - min + 1;
+            }
+            else if( com > user ) {
+                document.write( "DOWN!  com = " + com );
+                max = com - 1;
+                mul = max - min + 1;
+            }
+        }
 
     </script>
 </head>
