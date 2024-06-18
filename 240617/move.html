@@ -40,8 +40,8 @@
                 if( board[i][k] == 0 ) tdClass="blank";
                 if( board[i][k] == 2 ) {
                     tdClass="me";
-                    x = k;
                     y = i;
+                    x = k;
                 }
 
                 out += `<td class="${tdClass}">`;
@@ -49,7 +49,7 @@
                 out += "</td>";
             }
 
-            out += "</tr>";
+            out + "</tr>";
         }
 
         out += "</table>";
@@ -59,26 +59,30 @@
     $(document).keyup(function( event ){
         // w - 87, a - 65, s - 83, d - 68
         var key = event.keyCode;
-        alert( typeof key );
+        // alert( typeof key );
+
+        var stepx = x, stepy = y;  // 이동할 위치 표현변수
+        board[y][x]=0;
+            $("td").eq(y*21+x).removeClass("me");
+            $("td").eq(y*21+x).addClass("blank");  //현재 위치에 클래스명 blank 로변경
+
         switch(key){
             case 87:
-                board[y][x];
-                $("td").eq(y*21+x).removeClass("me");
-                $("td").eq(y*21+x).addClass("blank");  // 현재 위치에 클래스명 blank로 변경
-                y--;
-                board[y][x]=2;
-                $("td").eq(y*21+x).removeClass("blank");
-                $("td").eq(y*21+x).addClass("me");  // 이동할 위치에 클래스명 me로 변경
+                stepy--;
                 break;
             case 65:
-
+                stepx--;
                 break;
             case 83:
-
+                stepy++;
                 break;
             case 68:
-
+                stepx++;
                 break;
+        }
+        if( board[stepy][stepx] !=1){
+            x = stepx;
+            y = stepy;
         }
     });
 
