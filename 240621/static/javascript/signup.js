@@ -1,31 +1,54 @@
 // signup.js
 
 $(function(){
+
+    $("#portrait").on('change', function(e){
+        // console.log( $(this).val() );
+        console.log( e.target.files );
+        var file = e.target.files[0];  // input 태그로 선택한 파일의 정보
+                                       // 파일명, 파일 유형, 수정일자, 크기
+
+        var reader = new FileReader(); // 파일 열기 객체 생성
+        reader.onload = function(e){  // 파일 열기가 완료되면
+            console.log( e.target.result );
+            var path = e.target.result;
+
+            $("#preview").css( "background", "url("+path+") no-repeat center" );
+            $("#preview").css( "background-size", "cover" );
+
+            // 이미지태그.attr( "src", 경로 );
+        }
+
+        reader.readAsDataURL( file );
+
+        // console.log( e.target.result );
+    });
+
     // 회원가입 버튼 클릭 이벤트 등록
-    // $("#signup").on('click', requiredCheck);
+    $("#signup").on('click', requiredCheck);
 
     // 체크 박스들을 선택하였을 경우 어떻게 값이 나오나?
-    $("#signup").on('click', function(){
+    // $("#signup").on('click', function(){
         // jquery에서 checkbox 중 체크한 것만 가져오려면
         // $("input[name=interest]:checked")
         // :checked를 붙여야 체크한 것만 가져온다.
 
-        alert( $("input[name=interest]:checked").length );
+        // alert( $("input[name=interest]:checked").length );
 
         // 체크한 value 값을 전부 확인하려면
-        let itr = $("input[name=interest]:checked");
-        let value = [];
-        for( var i=0; i<itr.length; i++ ){
-            value.push( itr[i].val() );
-        }
-        alert( "체크한 관심 분야 : " + value );
+        // let itr = $("input[name=interest]:checked");
+        // let value = [];
+        // for( var i=0; i<itr.length; i++ ){
+        //     value.push( itr[i].val() );
+        // }
+        // alert( "체크한 관심 분야 : " + value );
 
         // let interest = $("input[name=interest]:checked").val();
         // alert( interest );
 
         // $("#signupForm").submit();
-    });
-});
+        // });
+}); 
 
 function requiredCheck(){  // 필수 입력을 모두 입력했는가?
     var id = $("#userId");  // 아이디 id.val()
@@ -59,6 +82,13 @@ function requiredCheck(){  // 필수 입력을 모두 입력했는가?
         addr.focus();
     }else{  // 위의 if 조건식이 모두 거짓이라면 동작
             // 모두 거짓이면 필수입력 전부 입력된 것
+
+        // localstorage에 저장
+
+        // 아이디 - id, 비밀번호 - pw, 이메일 - email, 연락처 - tel, 주소 - addr
+        var user = { id:id.val(), pw:pw.val(), email:email.val(), tel:tel.val(), addr:addr.val() }
+        localStorage.setItem( "user", JSON.stringify( user ) );
+
         $("#signupForm").submit();
     }
 }
