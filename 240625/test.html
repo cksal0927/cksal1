@@ -1,0 +1,58 @@
+<!-- test.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부동산 사이트</title>
+
+    <!-- jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="./static/javascript/test.js"></script>
+    <link rel="stylesheet" href="./static/css/test.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">세상의 모든 부동산 - 세모부</div>
+        <div id="body">
+            <div id="search">
+                <div id="choice">
+                    <select id="method">
+                        <option value="0">거래방식</option>
+                        <option value="1">전체</option>
+                        <option value="2">매매</option>
+                        <option value="3">전세</option>
+                        <option value="4">월세</option>
+                    </select>
+                    <select id="price">
+                        <option value="0">가격대</option>
+                    </select>
+                    <select id="width">
+                        <option value="0">면적</option>
+                    </select>
+                    <select id="roomNum">
+                        <option value="0">방/욕실수</option>
+                    </select>
+                </div>
+                <input type="text" name="search"> <button type="button" id="sch">검색</button>
+                <button id="consult">상담</button>
+            </div>
+            <div id="imgBox">
+                <div id="first">
+                    <div class="room" id="asquare"><img src="./static/image/asquare.jpg" alt=""><div class=textBox>전세<br>1억 3,000</div></div>
+                    <div class="room" id="hyodong"><img src="./static/image/hyodong.jpg" alt=""><div class=textBox>매매<br>3억 2,000</div></div>
+                    <div class="room" id="central"><img src="./static/image/central.jpg" alt=""><div class=textBox>전세<br>5억</div></div>
+                    <div class="room" id="joongdong"><img src="./static/image/joongdong.jpg" alt=""><div class=textBox>월세<br>2,500/90</div></div>
+                </div>
+                <div id="second">
+                    <div class="room" id="xi"><img src="./static/image/xi.jpg" alt=""><div class=textBox>매매<br>4억 2,000</div></div>
+                    <div class="room" id="gloria"><img src="./static/image/gloria.jpg" alt=""><div class=textBox>매매<br>5억</div></div>
+                    <div class="room" id="mockdong"><img src="./static/image/mockdong.jpg" alt=""><div class=textBox>전세<br>3억 6,000</div></div>
+                    <div class="room" id="hanbat"><img src="./static/image/hanbat.jpg" alt=""><div class=textBox>월세<br>3,000/100</div></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

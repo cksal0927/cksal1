@@ -11,9 +11,7 @@ let clickStop = true;
 
 function imgClick(){
     if( !clickStop ) return;  // 두 번 이상 연속 클릭 방지
-}
 
-function imgClick(){
     var idx = $(".item").index($(this));  // 몇 번째 div 클릭했나? 인덱스
     var $clickImg = $(".item").eq(idx).find("img");  // 클릭한 div의 img태그
 
@@ -32,7 +30,6 @@ function imgClick(){
 
     // 클릭한 이미지가 두 개라면 비교하기
     if( selectImg.length == 2 ){
-        clickStop = false;
         if( matching() ){  // 두 개의 이미지가 같다.
             // 같은 이미지이기 때문에 빨간 테두리 제거 - select클래스 제거
             $(".item").eq(selectImg[0].div).find("img").removeClass("select");
@@ -44,7 +41,7 @@ function imgClick(){
             selectImg = [];  // 두 개의 이미지 비교가 끝났기 때문에 다음을 위해 초기화
 
         }else{  // 두 개의 이미지가 같지 않다.
-
+            clickStop = false;
             // 서로 다른 이미지, 1초 뒤에 두 개의 이미지 감추기
             setTimeout( function(){
                 $(".item").eq(selectImg[0].div).find("img").removeClass("select");

@@ -1,0 +1,101 @@
+/* test.css */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#wrap{
+    width: 1500px;
+    margin: 0px auto;
+}
+
+#header{
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+    padding: 30px;
+    border-bottom: 2px solid navy;
+    font-weight: 800;
+    color: orange;
+    background: rgb(248, 248, 238);
+}
+
+#body{
+    width: 100%;
+}
+
+#search{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    margin-top: 15px;
+}
+
+#choice{
+    width: 40%;
+}
+
+#method{
+    width: 30%;
+    height: 30px;
+}
+
+#price{
+    width: 20%;
+    height: 30px;
+}
+
+#width{
+    width: 15%;
+    height: 30px;
+}
+
+#roomNum{
+    width: 31%;
+    height: 30px;
+}
+
+input[name=search]{
+    width: 50%;
+    height: 30px;
+}
+
+#sch{
+    width: 5%;
+}
+
+#consult{
+    width: 5%;
+    height: 30px;
+    background: orange;
+    border: 1px solid #aaa;
+}
+
+#imgBox{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#first, #second{
+    width: 1260px;
+    display: flex;
+}
+
+.room img{
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    margin: 20px 20px 0 20px;
+
+}
+
+.textBox{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: orange;
+    font-weight: 600;
+}
